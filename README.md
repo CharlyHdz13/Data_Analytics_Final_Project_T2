@@ -7,6 +7,8 @@
 ### Hi! This is just a test.
 As disscused: I'll be working with the Machine Learning Model.
 
+Selected topic: Covid-19 patients
+
 Regards,
 
 Testing
