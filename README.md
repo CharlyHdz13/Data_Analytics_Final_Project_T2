@@ -4,7 +4,7 @@ Through exploration, graphs and a analysis  on data from patients, who were admi
 
 ## Team members and means of communication
 
-- Alexis Ángles: axis.angeles@gmail.com
+- Alexis Ángeles: axis.angeles@gmail.com
 - David Escudero: davidescuderog_@hotmail.com
 - Carlos Hernández: charly97hernandez@gmail.com
 - Rebeca Osorio: rebeca.subs@gmail.com
