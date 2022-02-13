@@ -24,7 +24,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
     - We will try to find out any pattern or trends that assume an insight into how the Covid pandemic played out. 
     - Also, we are evaluating ways to predict a patients outcome based on the vital signs of him and his background.
 
-## Team's Member and Offical Contact Informacion.
+## Team's Members and Offical Contact Informacion.
 
 - Alexis Ángeles: axis.angeles@gmail.com
 - David Escudero: davidescuderog_@hotmail.com
