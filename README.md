@@ -9,3 +9,20 @@ Through exploration, graphs and a analysis  on data from patients, who were admi
 - Carlos Hernández: charly97hernandez@gmail.com
 - Rebeca Osorio: rebeca.subs@gmail.com
 - Juan Carlos Reyes: juancarlosreyessoto@gmail.com
+
+#
+
+## Machine Learning Model
+
+In order to understand the overall relationshio between health and vaccination data, we'll develop a unsupervised machine learning model to identify different clusters of patients so that we can analyze the death probability and illness seriousness among the different groups. 
+
+The modeling process will consist of:
+- Initial data processing (cleaning, encoding, scaling);
+- Followed by a Principal Component Analysis to decrease features;
+- Elbow curve chart to define optimal clusters;
+- K-means model selected;
+- Class prediction and visualization;
+
+
+
+
