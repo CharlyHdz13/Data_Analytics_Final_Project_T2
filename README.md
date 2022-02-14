@@ -68,23 +68,48 @@ The modeling process will consist of:
     * 3D Plotting to visualize each cluster
 
 - Elbow Curve:
-![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/Elbow_Curve_V1.png)
+![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_V1.png)
 
 - Clustering as follows:
-![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/Cluster_V1.png)
+![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
 
 
 ## Database
+First steps with Database were exploration and cleaning. 
+
+1. Each column was reviewed in order to understand content  and determine which columns would be useful and which ones could be removed.
+
+2. Using Pandas the goal was completed, obtaining the values counts for each column and also getting the count for the NaN values inside each column of the dataset. finally we determined the columns needed and included a brief description of each column and checked if it was useful or not.
+![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_Columns_V1.png)
+
+3. As a result from exploration activity, we determined that some columns would be used only for the Machine Learning algorithm and some columns would be used for the Dashboard. This conclusion comes from the correlation on the columens, where some columns have direct correlation with the target we want to predict and we don’t want to skew our algorithm. The selected columns for each element can be found inside the **SelectedColumns sheet** in this doc. 
+![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_Columns_V1.png)
+
+4. Most of the unused columns of the original dataset were consired as this categorization per the fact that most this columns are compunded for NaN values above 2000 observations, No value added keeping this columns.
+
+5. Only one exception was made on **weight** column, which shows 2,556 NaN values, howevere we this feature is a *MUST* as a characteristic in patient's health status.
+
 The Provisional database that stands in for the final database accomplishes the following:
 
 - The following Entity relationship diagram (ERD) shows the initial integration of the database, this will help us create the **Final Data Base** we need to develop our machine learning model, and our dashboard which is based in mortality of patients with COVID 19.
 
 ![DBERD](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DBERD.png)
 
+  1. The first table is “Identification”. This table includes de main data of the person treated.
+  2. “Comorbilities” which is our second table, this table comes Boolean values, depending on this values, the connection continue to Third  - sixth table as follows:
+  3. Third table “Autoimmune Disease”
+  4. Fourth table “Cancer”
+  5. Fifth table “Smoking”
+  6. Sixth table “Immunosuppresion” 
+  7. The next table “Vital signs” is correlated to the first one “Identification”
+  8. Eighth table “Evolution” also correlated with the first one
+  9. Finally “Death cause” table is correlated with “Evolution” Table.
+
 - Draft machine learning module is connected to the provisional database (image from Mockup model taking information from Database in CSV format.
 
 ![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
 
 Regards,
+
 T2
 
