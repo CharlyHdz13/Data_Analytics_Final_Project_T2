@@ -21,23 +21,34 @@ COVID - 19 is affecting globally, not only for healthy reasons, economic, social
 Mexican health professionals complain the government moved too slowly to shut down business and stop the spread of the coronavirus. Doctors say hospitals around Mexico City reached capacity rapidly. Additionally, it is a "public belief" that is you need to be treated in a public institution; the expected result is worse than if you are treated on a private Hospital. Trying to eliminate this "Public belief" and using data to try to expect the outcome from those patients which arrive to a public hospital to be treated with Covi-19 disease we will perform exploration, data analysis and hypothesis verification taking in consideration each patient data particularity.
 
 Scope of the project may be increase/expand according to the results we get. Initially:
-    - We will try to find out any pattern or trends that assume an insight into how the Covid pandemic played out. 
-    - Also, we are evaluating ways to predict a patients outcome based on the vital signs of him and his background.
+- We will try to find out any pattern or trends that assume an insight into how the Covid pandemic played out. 
+-  Also, we are evaluating ways to predict a patients outcome based on the vital signs of him and his background.
 
-## Team's Members and Offical Contact Informacion.
+## Team's Member and Offical Contact Informacion.
 
-- Alexis Ángeles: axis.angeles@gmail.com
-- David Escudero: davidescuderog_@hotmail.com
-- Carlos Hernández: charly97hernandez@gmail.com
-- Rebeca Osorio: rebeca.subs@gmail.com
-- Juan Carlos Reyes: juancarlosreyessoto@gmail.com
+- Alexis Ángeles **(AA)** : axis.angeles@gmail.com
+- David Escudero **(DE)**: davidescuderog_@hotmail.com
+- Carlos Hernández **(CH)**: charly97hernandez@gmail.com
+- Rebeca Osorio **(RO)**: rebeca.subs@gmail.com
+- Juan Carlos Reyes **(JC)**: juancarlosreyessoto@gmail.com
+
+### Team Communication:
+* Slack:  C0325T546JH**
+
+### Team Member Responsabilities - Work As A Team:
+* Square: **(CH,JC)**  The team member in the square role will be responsible for the repository.
+* Triangle: **(RO,AA)** The member in the triangle role will create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.
+* Circle: **(DE,CH)** The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
+* X: **(AA,DE,CH,RO,JC)** The member in the X role will decide which technologies will be used for each step of the project.
 
 ## Resources (Draf ... To be updated upon usage)
 - Software: Git version 2.33.0.windows.2, Visual Studio 1.62.2, Jupiter Notebook 6.4.6, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)]Anaconda.
+- Details on : Tecnologies_Used_T2.md
+
+# First Segment Project Deliverable
 
 ## Machine Learning Model
-
-In order to understand the overall relationshio between health and vaccination data, we'll develop a unsupervised machine learning model to identify different clusters of patients so that we can analyze the death probability and illness seriousness among the different groups. 
+In order to understand the overall relationship between health and vaccination data, we are looking forward to develop an unsupervised machine learning model to identify different clusters of patients so that we can analyze the death probability and illness seriousness among the different groups. 
 
 The modeling process will consist of:
 - Initial data processing (cleaning, encoding, scaling);
@@ -46,6 +57,21 @@ The modeling process will consist of:
 - K-means model selected;
 - Class prediction and visualization;
 
+1. Data is taken provisionally from the DB:
 
+![DB_conn_Model](DB_conn_Model.png)
+
+2. Outputs label(s) for input data is the following:
+
+## Database
+The Provisional database that stands in for the final database accomplishes the following:
+
+- The following Entity relationship diagram (ERD) shows the initial integration of the database, this will help us create the **Final Data Base** we need to develop our machine learning model, and our dashboard which is based in mortality of patients with COVID 19.
+
+![DBERD](DBERD.png)
+
+- Draft machine learning module is connected to the provisional database (image from Mockup model taking information from Database in CSV format.
+
+![DB_conn_Model](DB_conn_Model.png)
 
 
