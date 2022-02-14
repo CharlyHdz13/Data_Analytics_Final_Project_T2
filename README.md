@@ -41,7 +41,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
 * Circle: **(DE,CH)** The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
 * X: **(AA,DE,CH,RO,JC)** The member in the X role will decide which technologies will be used for each step of the project.
 
-## Resources (Draf ... To be updated upon usage)
+## Resources (Draft ... To be updated upon usage)
 - Software: Git version 2.33.0.windows.2, Visual Studio 1.62.2, Jupiter Notebook 6.4.6, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)]Anaconda.
 - Details on : Tecnologies_Used_T2.md
 
@@ -62,6 +62,17 @@ The modeling process will consist of:
 ![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
 
 2. Outputs label(s) for input data is the following:
+- Data premises:
+    * Processed dataset: 5.3K data points and 81 features
+    * Six clusters selected (Elbow Curve)
+    * 3D Plotting to visualize each cluster
+
+- Elbow Curve:
+![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/Elbow_Curve_V1.png)
+
+- Clustering as follows:
+![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/Cluster_V1.png)
+
 
 ## Database
 The Provisional database that stands in for the final database accomplishes the following:
