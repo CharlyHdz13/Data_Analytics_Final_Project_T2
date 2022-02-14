@@ -80,10 +80,10 @@ First steps with Database were exploration and cleaning.
 1. Each column was reviewed in order to understand content  and determine which columns would be useful and which ones could be removed.
 
 2. Using Pandas the goal was completed, obtaining the values counts for each column and also getting the count for the NaN values inside each column of the dataset. finally we determined the columns needed and included a brief description of each column and checked if it was useful or not.
-![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_Columns_V1.png)
+![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/1155fda6dfa4c5bbaa167e7c404d7600b1727d25/Image_%20Resources/DB_Columns_V1.png)
 
 3. As a result from exploration activity, we determined that some columns would be used only for the Machine Learning algorithm and some columns would be used for the Dashboard. This conclusion comes from the correlation on the columens, where some columns have direct correlation with the target we want to predict and we don’t want to skew our algorithm. The selected columns for each element can be found inside the **SelectedColumns sheet** in this doc. 
-![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_Columns_V1.png)
+![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/1155fda6dfa4c5bbaa167e7c404d7600b1727d25/Image_%20Resources/DB_Columns_V1.png)
 
 4. Most of the unused columns of the original dataset were consired as this categorization per the fact that most this columns are compunded for NaN values above 2000 observations, No value added keeping this columns.
 
