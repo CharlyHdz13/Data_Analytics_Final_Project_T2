@@ -74,6 +74,12 @@ The modeling process will consist of:
 ![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
 
 
+Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
+
+|![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Card_Report.png) | ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Predict_vs_Actual_df.png) |
+|--|--|
+
+
 ## Database
 First steps with Database were exploration and cleaning. 
 
