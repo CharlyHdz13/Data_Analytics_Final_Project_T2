@@ -33,7 +33,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
 - Juan Carlos Reyes **(JC)**: juancarlosreyessoto@gmail.com
 
 ### Team Communication:
-* Slack:  C0325T546JH**
+* Slack:  C0325T546JH
 
 ### Team Member Responsabilities - Work As A Team:
 * Square: **(CH,JC)**  The team member in the square role will be responsible for the repository.
@@ -59,7 +59,7 @@ The modeling process will consist of:
 
 1. Data is taken provisionally from the DB:
 
-![DB_conn_Model](DB_conn_Model.png)
+![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
 
 2. Outputs label(s) for input data is the following:
 
@@ -68,10 +68,12 @@ The Provisional database that stands in for the final database accomplishes the 
 
 - The following Entity relationship diagram (ERD) shows the initial integration of the database, this will help us create the **Final Data Base** we need to develop our machine learning model, and our dashboard which is based in mortality of patients with COVID 19.
 
-![DBERD](DBERD.png)
+![DBERD](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DBERD.png)
 
 - Draft machine learning module is connected to the provisional database (image from Mockup model taking information from Database in CSV format.
 
-![DB_conn_Model](DB_conn_Model.png)
+![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
 
+Regards,
+T2
 
