@@ -109,7 +109,14 @@ The Provisional database that stands in for the final database accomplishes the 
 
 ![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
 
+## Questions to be Answered
+* Using unsupervised machine learning, can we cluster to find differentiators to help us identify the severity of the infection?
+* Using a machine learning model, can we predict the outcome of a patient with certain characteristics?
+* Can we identify Covid-19 infected patients who will need more resources?
+* Is it possible to estimate the probability of death from patient data?
+* Can we identify which vaccine has the highest mortality rate?
+* Can we identify patients affected by coronavirus who will not overcome the disease?
+
 Regards,
 
 T2
-
