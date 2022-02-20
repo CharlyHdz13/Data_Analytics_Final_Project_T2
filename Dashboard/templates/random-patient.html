@@ -33,28 +33,23 @@
           </div>
         </div>
       </nav>
-      <!-- Page and project's name, centering is achieved by the style.css -->
+      <!-- Page's name, centering is achieved by the style.css -->
       <div class="container-fluid">
-        <h1 class="display-2 fw-bold">Covid Meets Machine Learning</h1>
+        <h1 class="display-2 fw-bold">Random Patient's Data</h1>
       </div>
-      <!-- Select a Cluster element and pick a random patient element -->
-      <div class="container">
-        <div class="row">
-          <!-- Select element which the user can use to selected the desired cluster -->
-          <div class="col-md-10">
-            <select class="form-select form-select-lg mb-3" id="selectCluster" aria-label=".form-select-lg example" onchange="updateGraphs()">
-              <option selected>Select the cluster you want</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
-          <!-- Button that appears and allows the user to select a random patient from the cluster, user is also redirected to the /random-patient
-          page -->
-          <div class="col-md-2">
-            <p><a class="btn btn-light btn-lg" href="/random-patient" role="button" id="randomPatient">Random Patient</a></p>
-          </div>
-        </div>
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <!-- Brief description to let the user know what the page is about -->
+        <h4 style="text-align: center;">
+          The following data was taken at random from a patient
+          which belongs to the cluster you previously chosen.
+        </h4>
+        <h4 style="text-align:center;">
+          You can modify the values at will, and see what our Machine
+          Learning will predict as the necessary treatment for that
+          patient.
+        </h4>
+        <!-- Button that will redirect to the /predict site which will run the ML prediction with the values specified by the user -->
+        <h3 style="text-align: center;"><a class="btn btn-dark btn-lg" href="/predict" role="button" id="predict">Predict</a></h3>
       </div>
       <!-- Breaks to separate the main page from the references -->
       <br>
