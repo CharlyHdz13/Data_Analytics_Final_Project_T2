@@ -14,5 +14,16 @@ def index():
 def about():
    return render_template("about.html")
 
+# Define route for random patient page of our dashboard
+@app.route("/random-patient")
+def random_patient():
+   return render_template("random-patient.html")
+
+# Define route for predict page of our dashboard which will run a python script which will predict the outcome.
+# At the end it returns to the /random-patient
+@app.route("/predict")
+def predict():
+   return redirect("/random-patient",code=302)
+
 if __name__ == "__main__":
    app.run()
