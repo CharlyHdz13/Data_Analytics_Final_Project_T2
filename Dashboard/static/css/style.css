@@ -1,0 +1,13 @@
+body{
+  background-color: aquamarine;
+  
+}
+h1{
+  color:black;
+  text-align: center;
+}
+.text-center{
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 150px;
+}
