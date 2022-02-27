@@ -60,7 +60,7 @@ The modeling process will consist of:
 - Class prediction and visualization;
 
 <br>
-![ClusterModel_Roadmap.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/ClusterModel_Roadmap.PNG) 
+![ClusterModel_Roadmap.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/ClusterModel_Roadmap.PNG) 
 
 <br>
 
@@ -84,7 +84,7 @@ After feature decreasing, clustering model requires an input for the number of c
 Instead of a dty and error process, we run the model with different kMeans to plot an **Elbow Curve** to decide the optimal number of clusters. In this case, we'll use 4 kMeans. 
 
 **Elbow Curve:**
-![Elbow_Curve_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_VF.PNG)
+![Elbow_Curve_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/Elbow_Curve_VF.PNG)
 <br>
 
 ### **Model choice**
@@ -94,7 +94,7 @@ As mentioned earlier, this clustering model was selected as we explore the data 
 We also decided over a _hierarchical clustering_ since the kMeans model allows to define clusters by meassuring the model **inertia** instead of a more subjective approach. 
 
 **ClusterModel_VF:**
-![ClusterModel_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/ClusterModel_VF.PNG)
+![ClusterModel_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/ClusterModel_VF.PNG)
 
 <br>
 ### Classification
