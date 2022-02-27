@@ -55,7 +55,7 @@ The modeling process will consist of:
 - Followed by a Principal Component Analysis to decrease features;
 - Elbow curve chart to define optimal clusters;
 - K-means model selected;
-- Class prediction and visualization;
+- Class prediction and visualization.
 
 1. Data is taken provisionally from the DB:
 
@@ -68,11 +68,19 @@ The modeling process will consist of:
     * 3D Plotting to visualize each cluster
 
 - Elbow Curve:
+
 ![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_V1.png)
 
 - Clustering as follows:
+
 ![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
 
+## Classification
+
+Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
+
+| ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Predict_vs_Actual_df.png) | ![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Card_Report.png) |
+|--|--|
 
 ## Database
 First steps with Database were exploration and cleaning. 
@@ -165,8 +173,7 @@ After feature decreasing, clustering model requires an input for the number of c
 Instead of a dty and error process, we run the model with different kMeans to plot an **Elbow Curve** to decide the optimal number of clusters. In this case, we'll use 4 kMeans. 
 
 **Elbow Curve:**
-![Elbow_Curve_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/Elbow_Curve_VF.PNG)
-<br>
+![Elbow_Curve_V2.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/46a4e610d2db4ea30b8efe0eddfd2b1de3d7f266/Image_%20Resources/Elbow_Curve_V2.png)
 
 ### **Model choice**
 
@@ -175,15 +182,9 @@ As mentioned earlier, this clustering model was selected as we explore the data 
 We also decided over a _hierarchical clustering_ since the kMeans model allows to define clusters by meassuring the model **inertia** instead of a more subjective approach. 
 
 **ClusterModel_VF:**
-![ClusterModel_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/ClusterModel_VF.PNG)
+![ClusterModel_V2.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/46a4e610d2db4ea30b8efe0eddfd2b1de3d7f266/Image_%20Resources/ClusterModel_V2.png)
 
 <br>
-### Classification
-
-Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
-
-| ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Predict_vs_Actual_df.png) | ![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Card_Report.png) |
-|--|--|
 
 #
 Regards,
