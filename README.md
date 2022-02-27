@@ -136,7 +136,7 @@ The Provisional database that stands in for the final database accomplishes the 
 ### **Clustering Model**
 Clustering model allow us to categorize records into a certain number of clusters, in other words identifying groups of similar records and labeling the records according to the group to which they belong. This is done without the benefit of prior knowledge about the groups and their characteristics.
 
-![ClusterModel_Roadmap.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/Image_Resources/ClusterModel_Roadmap.PNG) 
+![ClusterModel_Roadmap.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/b3ec6db1d8e044d8f632ed0da1c38af0a9901fb9/Image_%20Resources/ClusterModel_Roadmap.PNG) 
 
 
 ### **Preliminary Data Preprocessing**
