@@ -49,7 +49,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
 
 ## Machine Learning Models
 
-### Clusters
+### **Clustering Model**
 In order to understand the overall relationship between health and vaccination data, we are looking forward to develop an unsupervised machine learning model to identify different clusters of patients so that we can analyze the death probability and illness seriousness among the different groups. 
 
 The modeling process will consist of:
@@ -59,24 +59,44 @@ The modeling process will consist of:
 - K-means model selected;
 - Class prediction and visualization;
 
-1. Data is taken provisionally from the DB:
+<br>
+![ClusterModel_Roadmap.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/ClusterModel_Roadmap.PNG) 
 
-![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
+<br>
 
-2. Outputs label(s) for input data is the following:
-- Data premises:
-    * Processed dataset: 5.3K data points and 81 features
-    * Six clusters selected (Elbow Curve)
-    * 3D Plotting to visualize each cluster
+### **Preliminary Data Preprocessing**
 
-- Elbow Curve:
+The clustering model data is initially taken from our **PostgreSQL** database, located within our team's Amazon Web Services (AWS) server. This dataset consists of a 5.3k patient table already cleaned through a separate python process.
 
-    ![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_V1.png)
+Still, we assesed the loaded DataFrame to decrease, if possible, the number of features to be used by the ML model; we also select if some additional **Encoding** is necessary.
+This dataset is 
 
-- Clustering as follows:
+Next, the remaining numerical, not boolean data like _Age_, _weight_, _height_, _blood pressure_, etc. is standarized through a scalling process using **sklearn's StandardScaler** python module.
 
-    ![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
+### **Preliminary Feature engineering and selection**
 
+After scalling and column dropping, the processed data has almost 80 different variables to be considered for the clustering model. This nunmber of features may seem to high for interpretation and visualization so we turn to a **Principal Component Analysis (PCA)** to reduce the features to 3.
+
+### **Model preparation, training and testing**
+
+After feature decreasing, clustering model requires an input for the number of clusters to run the model. 
+
+Instead of a dty and error process, we run the model with different kMeans to plot an **Elbow Curve** to decide the optimal number of clusters. In this case, we'll use 4 kMeans. 
+
+**Elbow Curve:**
+![Elbow_Curve_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_VF.PNG)
+<br>
+
+### **Model choice**
+
+As mentioned earlier, this clustering model was selected as we explore the data and have little to no input to clasify the different patients.
+
+We also decided over a _hierarchical clustering_ since the kMeans model allows to define clusters by meassuring the model **inertia** instead of a more subjective approach. 
+
+**ClusterModel_VF:**
+![ClusterModel_VF.PNG](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/ClusterModel_VF.PNG)
+
+<br>
 ### Classification
 
 Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
@@ -84,6 +104,7 @@ Preliminarily we'll use the Logistic Regression to predict the outcome of COVID 
 | ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Predict_vs_Actual_df.png) | ![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Card_Report.png) |
 |--|--|
 
+#
 
 ## Database
 First steps with Database were exploration and cleaning. 
