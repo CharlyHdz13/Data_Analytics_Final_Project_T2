@@ -152,10 +152,16 @@ The Provisional database that stands in for the final database accomplishes the 
 * Can we identify patients affected by coronavirus who will not overcome the disease?
 
 # Second Segment Project Deliverable
+
 ## Dashboard
 For this second deliverable we sketched out how our dashboard will work and look like. With the following [link](https://docs.google.com/presentation/d/184yOuFpKU-F9wypu_j39GzX5Uihh3aV30aT-S8nwJlo/edit#slide=id.g1177521f176_0_0) were a blueprint of how we want our dashboard to work and look.
 
 The overall objective of our dashboard is to find new trends, that our clustering model could show. Also be able to determine with a supervised Machine Learning algorithm if a patient needs more or less resources into his treatment according to his overall conditions of the patient.
+
+## Database (2SDP)
+
+## Machine Learning Models (2SDP)
+
 
 Regards,
 
