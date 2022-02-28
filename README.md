@@ -130,7 +130,7 @@ The Provisional database that stands in for the final database accomplishes the 
 # Second Segment Project Deliverable :point_left:
 
 ## Database (2SDP) :point_left:
-We decided to use AWS ERD service to be the host server of our database. We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
+We decided to use AWS RDS service to be the host server of our database. We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
 
 ## Machine Learning Models (2SDP) :point_left:
 
