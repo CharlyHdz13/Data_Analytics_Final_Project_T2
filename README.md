@@ -131,7 +131,8 @@ The Provisional database that stands in for the final database accomplishes the 
 
 ## Database (2SDP) :point_left:
 We decided to use AWS ERD service to be the host server of our database. We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
-We decided to make exploration with Jupyter Notebook, and decided to create our DB with the next  [Queries.sql](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Queries.sql) and decided to used the following types of JOINS to make correlations in the DB
+We decided to make exploration with Jupyter Notebook, and decided to create our DB with the next  [Queries](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Queries.sql) then decided to used the following types of JOINS to make correlations in the DB for demostration purposes which will allow to make exploration for the models
+![Joins.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Joins.png)
 
 ## Machine Learning Models (2SDP) :point_left:
 
