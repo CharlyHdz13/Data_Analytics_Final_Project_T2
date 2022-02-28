@@ -6,6 +6,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 - Amazon Web Services
     - RDS
 - PostrgreSQL
+    - pgAdmin
 
 ## Machine Learning
 We'll use SciKitLearn library and Jupyter Notebooks for the ML process. As Pyplot library to visualize the  clusters.
