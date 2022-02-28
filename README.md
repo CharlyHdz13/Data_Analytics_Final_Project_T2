@@ -78,7 +78,8 @@ The modeling process will consist of:
 ### Logistic Regression ML Model
 
 The data was taken from the AWS Postgress Database, and the connection looks like the following:
-![Load Data from AWS]()
+
+![Load Data from AWS](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Load_Data_AWSDB.png)
 
 
 **Data Managment**
@@ -89,7 +90,7 @@ For the selection of the features, it was necessary to split them into categorie
 
 - In the Analysis of the discrete variables, we created a *frequency* function that helped us to know the distribution of the values in each column and simplify the normalization process.
 
-![Univariate Frequency Table]()
+![Univariate Frequency Table](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/ExpAn_DiscNorm.png)
 
 
 It was a necessary process since some values in the columns only were represented by 10 or 20 rows.
@@ -102,7 +103,7 @@ It was a necessary process since some values in the columns only were represente
 - We wanted to predict what would be the outcome of a patient based on some characteristics.
 - Since the outcome is 0 or 1, but not both at the same time, a Logistic Regression Model is ideal to solve this problem.
 
-![Logistic Regression Explanation]()
+![Logistic Regression Explanation](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/LogReg_Explanation.png)
 
 - We have the advantage of knowing how much is the weight of each parameter, which means that, if the user input new characteristics of a patient, we will know its outcome. This is important because we hope to use this feature in the Flask App.
 
