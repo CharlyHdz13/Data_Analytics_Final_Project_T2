@@ -8,6 +8,8 @@
     - RDS
 - PostrgreSQL 12.8
     - pgAdmin
+- Python 3
+   - SQLAlchemy
 
 ## Machine Learning
 We'll use SciKitLearn library and Jupyter Notebooks for the ML process. As Pyplot library to visualize the  clusters.
