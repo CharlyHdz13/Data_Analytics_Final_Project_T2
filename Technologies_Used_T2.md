@@ -1,11 +1,12 @@
 # Technologies Used
 ## Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+- Python 3
+   - Pandas
 
 ## Database Storage
 - Amazon Web Services
     - RDS
-- PostrgreSQL
+- PostrgreSQL 12.8
     - pgAdmin
 
 ## Machine Learning
