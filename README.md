@@ -130,7 +130,14 @@ The Provisional database that stands in for the final database accomplishes the 
 # Second Segment Project Deliverable :point_left:
 
 ## Database (2SDP) :point_left:
-We decided to use AWS ERD service to be the host server of our database. We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
+We decided to use AWS ERD service to be the host server of our database.
+![Database_Storage_AWS.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Joins.png)
+
+
+
+
+
+We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
 We decided to make exploration with Jupyter Notebook, and decided to create our DB with the next  [Queries](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Queries.sql) then decided to used the following types of JOINS to make correlations in the DB for demostration purposes which will allow to make exploration for the models
 ![Joins.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Joins.png)
 
@@ -177,6 +184,8 @@ We also decided over a _hierarchical clustering_ since the kMeans model allows t
 For this second deliverable we sketched out how our dashboard will work and look like. With the following [DashBoard](https://docs.google.com/presentation/d/184yOuFpKU-F9wypu_j39GzX5Uihh3aV30aT-S8nwJlo/edit#slide=id.g1177521f176_0_0) were a blueprint of how we want our dashboard to work and look.
 
 The overall objective of our dashboard is to find new trends, that our clustering model could show. Also be able to determine with a supervised Machine Learning algorithm if a patient needs more or less resources into his treatment according to his overall conditions of the patient.
+
+![DashBoard.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/46a4e610d2db4ea30b8efe0eddfd2b1de3d7f266/Image_%20Resources/ClusterModel_V2.png)
 
 Regards,
 
