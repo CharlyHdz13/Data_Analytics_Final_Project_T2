@@ -133,8 +133,7 @@ The Provisional database that stands in for the final database accomplishes the 
 Database exploration was performed in a logic traceable steps in order to have avaiable the uinformation usefull for our analysis. We indentify thos data which has less tham 90% of availability, them we delete columns not usefull and fill those missing information. Columns names was updated and binary columns were maintain to perform the analysis. The steps performed are shown as folows:
 ![Database_Exploration.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Image_%20Resources/Database_Exploration.png)
 
-All steps can be veryfy in python file [Database_Exploration.ipynb] (https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Pytho_Files_Resources/Database_Exploration.ipynb)
-
+All steps can be veryfy in python file [Database_Exploration.ipynb](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Pytho_Files_Resources/Database_Exploration.ipynb)
 
 We decided to use AWS ERD service to be the host server of our database.
 ![Database_Storage_AWS.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Image_%20Resources/Database_Storage_AWS.png)
