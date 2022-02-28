@@ -75,12 +75,38 @@ The modeling process will consist of:
 
 ![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
 
-## Classification
+### Logistic Regression ML Model
 
-Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
+The data was taken from the AWS Postgress Database, and the connection looks like the following:
+![Load Data from AWS]()
 
-| ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Predict_vs_Actual_df.png) | ![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Card_Report.png) |
-|--|--|
+
+**Data Managment**
+
+For this process, we used *Label Encoding* and *Min_Max Scaler* from sklearn to help the model to understand all the dataframe and normalize the data of it. It was also helpful at the moment of split the data into training and testing sets.
+
+For the selection of the features, it was necessary to split them into categories: *vard* - discrete variables, *varc* - continue variables, *dates* and *lat_lon* for latitude and longitude:
+
+- In the Analysis of the discrete variables, we created a *frequency* function that helped us to know the distribution of the values in each column and simplify the normalization process.
+
+![Univariate Frequency Table]()
+
+
+It was a necessary process since some values in the columns only were represented by 10 or 20 rows.
+
+- For the Continuous ones, the percentiles where used as parameters to identify extreme values. Many of the columns had 'normal' outliers, so we didn't delete many rows in this section.
+
+- And with a pairplot we could find that *mean_blod_preassure* is correlated with the diastolic and systolic preassures.
+
+**Explanation of model choice, including limitations and benefits**
+- We wanted to predict what would be the outcome of a patient based on some characteristics.
+- Since the outcome is 0 or 1, but not both at the same time, a Logistic Regression Model is ideal to solve this problem.
+
+![Logistic Regression Explanation]()
+
+- We have the advantage of knowing how much is the weight of each parameter, which means that, if the user input new characteristics of a patient, we will know its outcome. This is important because we hope to use this feature in the Flask App.
+
+- The results of the accuracy given different variances in the data preprocessing are interesting. We'll study them further in the next delivery.
 
 ## Database
 First steps with Database were exploration and cleaning. 
