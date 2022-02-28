@@ -14,6 +14,11 @@
 ## Machine Learning
 We'll use SciKitLearn library and Jupyter Notebooks for the ML process. As Pyplot library to visualize the  clusters.
 PCA, and K-Means functions are used to cluster the patients and Logistic Regression to actually predict their outcome.
+- Python 3 (through jupyter notebook)
+   - Pandas
+   - To connect to SQL (sqlalchemy)
+   - Plotting libraries (hvplot, plotly)
+   - ML libraries: sklearn (StandardScaler, PCA, KMeans)
 
 ## Dashboard
 For our dashboard we will be using:
