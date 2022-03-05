@@ -14,6 +14,9 @@
 
    <!-- Added route for icon that shows at the top of the webpage -->
    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+   <!-- d3 JavaScript -->
+   <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
   <body>
     <!-- Navbar part, that allows us to move from Home page to about page -->
@@ -57,7 +60,7 @@
       <!-- Site from where the icon is taken -->
       <p style="text-align: center;"><a href="https://www.flaticon.com/free-icons/health" title="health icons">Health icons created by Freepik - Flaticon</a></p>
       <!-- Run init.js -->
-      <script src="static\js\init.js"></script>
+      <script src="static\js\app.js"></script>
       <!-- Call Popper libraries, just in case we use something that requires it -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
