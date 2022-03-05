@@ -10,7 +10,7 @@ __pycache__/
 
 # Passwords
 config.py
-
+config.js
 # Distribution / packaging
 .Python
 build/
