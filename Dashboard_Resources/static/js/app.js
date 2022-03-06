@@ -225,4 +225,33 @@ function mapCreation(){
     });
     // Then we add our 'graymap' tile layer to the map.
     streets.addTo(map);
+    // Object that has the latitudes and longitudes for each healthcare center
+    healthcareCenters={
+        GEA:[19.29066,-99.16032],
+        HGM:[19.41318,-99.15124],
+        HIM:[19.41098,-99.15195],
+        HJM:[19.48362,-99.13617],
+        HRAEB:[21.06174,-101.5764],
+        HRAECS:[14.82602,-92.34196],
+        HRAECV:[23.76229,-99.10687],
+        HRAEI:[19.31893,-98.85468],
+        HRAEO:[16.94781,-96.71235],
+        HRAEPY:[21.02033,-89.5819],
+        INCICH:[19.2919,-99.15359],
+        INER:[19.29412,-99.15617],
+        Nutricion:[19.28825,-99.15614]
+    }
+    for (hospital in healthcareCenters){
+        let r = 0;
+        for (id in patientsData["sex"]){
+            if(patientsData["healthcare_center"][id]=== hospital && patientsData["outcome"][id]=== "Death"){
+                r++;
+            };
+        };
+        console.log(r);
+        L.circle(healthcareCenters[hospital], {
+            radius: r*5
+         }).bindPopup("<h2>Institute: "+hospital+"</h2>"+"<br><h2>Deaths: "+r+"</h2>"
+         ).addTo(map);
+    };
 }
