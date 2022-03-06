@@ -15,7 +15,7 @@ function init(){
         patientsData = patients;
         //console.log(patientsData);
         clustersGraph();
-        lineChart();
+        lineChart(-1);
         barChart();
         mapCreation();
     });
@@ -31,7 +31,8 @@ function updateGraphs() {
     let value = selectCluster.options[selectCluster.selectedIndex].value;
     console.log("I will be updating the graphs");
     console.log(value);
-    console.log(patientsData);
+    lineChart(value);
+    
 };
 
 // Function that builds 3D Cluster plot
@@ -106,13 +107,15 @@ function clustersGraph(){
 };
 
 // Function that builds scatter line plot
-function lineChart(){
+function lineChart(cluster){
+    console.log(cluster);
     // Array with the number of the months
     let months = ["1","2","3","4","5","6","7","8","9","10","11","12"];
     // Get the leaving dates of the patients
-    leavingDates = patientsData.leaving_date;
-    // Empty array to fill leaving dates in UTC format
-    deathsDates =[];
+    let leavingDates = patientsData.leaving_date;
+    // Empty arrays to fill leaving dates in UTC format
+    let deathsDates =[];
+    let deathsDatesCluster=[];
     // Fill deathDates array with dates in UTC format only for patients where the outcome was death
     for (id in leavingDates){
         // Convert from epoch to UTC
@@ -120,20 +123,35 @@ function lineChart(){
         if (patientsData.outcome[id] === "Death"){
             // Fill array if condition is met
             deathsDates.push(UTCDate);
+            // Fill cluster array if there is a selected cluster
+            if (cluster>=0 && patientsData.Class[id]=== parseInt(cluster)){
+                deathsDatesCluster.push(UTCDate);
+            };
         };
     };
-    // Sort the array in ascending order
+    // Sort the arrays in ascending order
     deathsDates.sort(function compareFn(a,b){
         return a-b;
     });
-    // Empty array that will store dates in a MM/YY format
+    deathsDatesCluster.sort(function compareFn(a,b){
+        return a-b;
+    });
+    // Empty arrays that will store dates in a MM/YY format
     deathDatesMMYY=[];
-    // Fill deathDates array
+    deathDatesMMYYCluster=[];
+    // Fill deathDatesMMYY array
     deathsDates.forEach(date => {
         // Concatenetion of getMonth() / getFullYear
-        newDate = months[date.getMonth()]+"/"+date.getFullYear();
+        let newDate = months[date.getMonth()]+"/"+date.getFullYear();
         // Fill array with date in new format
         deathDatesMMYY.push(newDate);
+    });
+    // Fill deathDatesMMYYCluster array
+    deathsDatesCluster.forEach(date => {
+        // Concatenetion of getMonth() / getFullYear
+        let newDate = months[date.getMonth()]+"/"+date.getFullYear();
+        // Fill array with date in new format
+        deathDatesMMYYCluster.push(newDate);
     });
     // Get the counts of deaths for each date in deathDatesMMYY
     let countUnique = deathDatesMMYY => {
@@ -156,6 +174,19 @@ function lineChart(){
             color:"#000000"
         }
     };
+    // Prebuilt trace for cluster deaths
+    let traceCluster ={
+        x:[],
+        y:[],
+        mode:"lines+markers",
+        name:" ",
+        marker:{
+            size:10
+        },
+        line:{
+            color:"#00AEFF"
+        }
+    };
     // Fill trace.y with the corresponding count of deaths for each date
     deathDatesMMYY.forEach(date=>{
         trace.y.push(countUnique(deathDatesMMYY)[date]);
@@ -163,6 +194,19 @@ function lineChart(){
     console.log(trace);
     // Place trace into array and graph in div LineChart
     let data =[trace];
+    // Fill traceCluster with data if a cluster is selected
+    if (cluster>=0){
+        // Fill traceCluster.x with the corresponding dates
+        traceCluster.x = deathDatesMMYYCluster;
+        // Fill traceCluster.y with the corresponding count of deaths for each date
+        deathDatesMMYYCluster.forEach(date=>{
+            traceCluster.y.push(countUnique(deathDatesMMYYCluster)[date]);
+        });
+        // Fill traceCluster.name with the Cluster {cluster number} Deaths format
+        traceCluster.name = "Cluster "+cluster+" Deaths";
+        // Push traceCluster to data to graph
+        data.push(traceCluster);
+    };
     Plotly.newPlot("LineChart",data);
 };
 
@@ -241,6 +285,7 @@ function mapCreation(){
         INER:[19.29412,-99.15617],
         Nutricion:[19.28825,-99.15614]
     }
+    // Loop through each hospital to get the number of deaths and fill map with circles
     for (hospital in healthcareCenters){
         let r = 0;
         for (id in patientsData["sex"]){
