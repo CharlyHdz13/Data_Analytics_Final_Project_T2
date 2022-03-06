@@ -1,8 +1,3 @@
-
-// Hide Random Patient button
-// let button = document.getElementById("randomPatient");
-// button.style.display = "none";
-
 // Get the select element to see which cluster is selected
 let selectCluster = document.getElementById("selectCluster");
 let button = document.getElementById("randomPatient");
@@ -33,6 +28,18 @@ function updateGraphs() {
     console.log(value);
     lineChart(value);
     barChart(value);
+    console.log(patientsData);
+    let clusterSize = 0;
+    for(id in patientsData.Class){
+        if(patientsData.Class[id] === parseInt(value)){
+            clusterSize++;
+        };
+    };
+    // Returns a random integer from 0 to 5378:
+    let randomID = Math.floor(Math.random() *clusterSize)+1;
+    console.log(randomID);
+    // Save random patient's data in local storage to use in random-patient
+    localStorage.setItem("randomID",randomID);
 };
 
 // Function that builds 3D Cluster plot
@@ -259,7 +266,7 @@ function barChart(cluster){
     console.log(trace);
     let data =[trace];
     Plotly.newPlot("BarChart",data)
-}
+};
 function mapCreation(){
     // Create the map object with a center and zoom level.
     let map = L.map('map').setView([19.4, -99.12], 11);
@@ -296,12 +303,12 @@ function mapCreation(){
         for (id in patientsData["sex"]){
             if(patientsData["healthcare_center"][id]=== hospital && patientsData["outcome"][id]=== "Death"){
                 r++;
+                };
             };
+            console.log(r);
+            L.circle(healthcareCenters[hospital], {
+                radius: r*5
+                }).bindPopup("<h2>Institute: "+hospital+"</h2>"+"<br><h2>Deaths: "+r+"</h2>"
+                ).addTo(map);
         };
-        console.log(r);
-        L.circle(healthcareCenters[hospital], {
-            radius: r*5
-         }).bindPopup("<h2>Institute: "+hospital+"</h2>"+"<br><h2>Deaths: "+r+"</h2>"
-         ).addTo(map);
-    };
-}
+};
