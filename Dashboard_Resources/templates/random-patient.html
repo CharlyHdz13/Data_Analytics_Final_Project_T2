@@ -54,6 +54,108 @@
         <!-- Button that will redirect to the /predict site which will run the ML prediction with the values specified by the user -->
         <h3 style="text-align: center;"><a class="btn btn-dark btn-lg" href="/predict" role="button" id="predict">Predict</a></h3>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h5 style="text-align: center;">Sex</h5>
+            <select class="form-select" aria-label="Default select example" id="sex">
+              <option selected="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+          </div>
+          <div class="class col-md-2">
+            <h5>Height[cm]</h5>
+            <input type="number" id="height" name="quantity" min="0" max="200">
+          </div>
+          <div class="class col-md-2">
+            <h5>Weight[Kg]</h5>
+            <input type="number" id="weight" name="quantity" min="0" max="200">
+          </div>
+          <div class="class col-md-2">
+            <h5>Age</h5>
+            <input type="number" id="age" name="quantity" min="0" max="115">
+          </div>
+          <div class="class col-md-2">
+            <h5>O2 Saturation[%]</h5>
+            <input type="number" id="o2_saturation" name="quantity" min="0" max="100">
+          </div>
+          <div class="class col-md-2">
+            <h5>Heart Rate[bpm]</h5>
+            <input type="number" id="heart_rate" name="quantity" min="0" max="200">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <h3 style="text-align: center;">Comorbilities</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="obesity">
+              <label class="form-check-label" for="flexCheckDefault">
+                Obesity
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="diabetes">
+              <label class="form-check-label" for="flexCheckDefault">
+                Diabetes
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="hypertension">
+              <label class="form-check-label" for="flexCheckDefault">
+                Hypertension
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="smoking">
+              <label class="form-check-label" for="flexCheckDefault">
+                Smoking
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="alcoholism">
+              <label class="form-check-label" for="flexCheckDefault">
+                Alcoholism
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="asthma">
+              <label class="form-check-label" for="flexCheckDefault">
+                Asthma
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="cancer">
+              <label class="form-check-label" for="flexCheckDefault">
+                Cancer
+              </label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="immunosuppression">
+              <label class="form-check-label" for="flexCheckDefault">
+                Immunosuppression
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Breaks to separate the main page from the references -->
       <br>
       <br>

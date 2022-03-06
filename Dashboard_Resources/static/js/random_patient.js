@@ -12,6 +12,12 @@ function init(){
         };
         console.log("Random Patient's Data");
         console.log(randomPatientData);
+        d3.select("#sex").property("value", randomPatientData.sex);
+        d3.select("#height").property("value",randomPatientData.height_cm);
+        d3.select("#weight").property("value",randomPatientData.weight_kg);
+        d3.select("#age").property("value",Math.trunc(randomPatientData.age));
+        d3.select("#o2_saturation").property("value",randomPatientData.oximeter_saturation);
+        d3.select("#heart_rate").property("value",randomPatientData.heart_rate);
     });
 };
 
