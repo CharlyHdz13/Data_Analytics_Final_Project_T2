@@ -16,7 +16,7 @@ function init(){
         //console.log(patientsData);
         clustersGraph();
         lineChart(-1);
-        barChart();
+        barChart(-1);
         mapCreation();
     });
 };
@@ -32,7 +32,7 @@ function updateGraphs() {
     console.log("I will be updating the graphs");
     console.log(value);
     lineChart(value);
-    
+    barChart(value);
 };
 
 // Function that builds 3D Cluster plot
@@ -209,9 +209,8 @@ function lineChart(cluster){
     };
     Plotly.newPlot("LineChart",data);
 };
-
 // Function that builds bar chart
-function barChart(){
+function barChart(cluster){
     // Array of comorbidities
     comorbidities =[
         "obesity",
@@ -228,9 +227,15 @@ function barChart(){
     comorbidities.forEach(comorbidity=>{
         let count =0;
         for (id in patientsData[comorbidity]){
-            if (patientsData[comorbidity][id]=== true){
-                count++;
-            }
+            if(cluster>=0){
+                if (patientsData[comorbidity][id]=== true && patientsData.Class[id]=== parseInt(cluster)){
+                    count++;
+                }
+            }else{
+                if (patientsData[comorbidity][id]=== true){
+                    count++;
+                };
+            };
         }
         comorbiditiesObject[comorbidity]=count;
     });
