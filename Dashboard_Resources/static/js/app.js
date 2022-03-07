@@ -246,7 +246,6 @@ function lineChart(cluster){
               }
             }
         }
-
     }
     Plotly.newPlot("LineChart",data,layout);
 };
@@ -288,18 +287,39 @@ function barChart(cluster){
     }).map(item=>sortedComorbiditiesObject[item]=comorbiditiesObject[item]);
     // Build generic empty trace
     let trace = {
-        x:Object.values(sortedComorbiditiesObject),
-        y:Object.keys(sortedComorbiditiesObject),
+        x:Object.keys(sortedComorbiditiesObject),
+        y:Object.values(sortedComorbiditiesObject),
         type:"bar",
         name:"",
         marker:{
             color:"#1300FF"
+        }
+    };
+    let layout ={
+        xaxis: {
+            title: {
+              text: 'Comorbilities',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
         },
-        orientation:"h"
+        yaxis: {
+            title: {
+              text: 'Sum',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
+        }
     };
     console.log(trace);
     let data =[trace];
-    Plotly.newPlot("BarChart",data)
+    Plotly.newPlot("BarChart",data,layout)
 };
 function mapCreation(){
     // Create the map object with a center and zoom level.
