@@ -107,11 +107,7 @@ We also decided over a _hierarchical clustering_ since the kMeans model allows t
 
 ### Logistic Regression ML Model  :point_left:
 
-As in the Clustering Model, the data was taken form the AWS DataBase, and the connection looks like the following:
-
-![Load Data from AWS](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Load_Data_AWSDB.png)
-
-This table has 87 columns, or many features! From which we have some string and datetime columns, we'll need to modify those ones and reduce the size of the dataframe so it can score a better accuracy from last week.
+As in the Clustering Model, the data was taken form the AWS DataBase. Table has 87 columns, or many features! From which we have some string and datetime columns, we'll need to modify those ones and reduce the size of the dataframe so it can score a better accuracy from last week.
 
 **Description of preliminary data preprocessing**
 - For this process, we used *Label Encoding* and *Min_Max Scaler* to normalize the data.
@@ -139,16 +135,15 @@ It was a necessary process since some values in the columns only were represente
 
 - We have the advantage of knowing how much is the weight of each parameter, which means that, if the user input new characteristics of a patient, we will know its outcome. This is important because we hope to use this feature in the Flask App.
 
-
 - The results of the accuracy given different variances in the data preprocessing are interesting. We'll study them further in the next delivery.
 
-
-## Dashboard (2SDP) :point_left:
+## Dashboard
 For this second deliverable we sketched out how our dashboard will work and look like. With the following [DashBoard](https://docs.google.com/presentation/d/184yOuFpKU-F9wypu_j39GzX5Uihh3aV30aT-S8nwJlo/edit#slide=id.g1177521f176_0_0) were a blueprint of how we want our dashboard to work and look.
 
-![DashBoard.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Image_%20Resources/Dashboard.png)
-
 The overall objective of our dashboard is to find new trends, that our clustering model could show. Also be able to determine with a supervised Machine Learning algorithm if a patient needs more or less resources into his treatment according to his overall conditions of the patient.
+
+## Presentation
+First presentation can be found on the folder.
 
 Regards,
 
