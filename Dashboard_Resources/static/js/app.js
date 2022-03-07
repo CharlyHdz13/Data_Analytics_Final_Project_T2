@@ -51,9 +51,10 @@ function clustersGraph(){
         z:[],
         mode:"markers",
         marker:{
-            color:"#EAFD02"
+            color:"#000000"
         },
-        type:"scatter3d"
+        type:"scatter3d",
+        name : "Cluster 0"
     };
     let trace1 = {
         x:[],
@@ -63,7 +64,8 @@ function clustersGraph(){
         marker:{
             color:"#FD7402"
         },
-        type:"scatter3d"
+        type:"scatter3d",
+        name : "Cluster 1"
     };
     let trace2 = {
         x:[],
@@ -73,7 +75,8 @@ function clustersGraph(){
         marker:{
             color:"#15FD02"
         },
-        type:"scatter3d"
+        type:"scatter3d",
+        name : "Cluster 2"
     };
     let trace3 = {
         x:[],
@@ -83,7 +86,15 @@ function clustersGraph(){
         marker:{
             color:"#02CCFD"
         },
-        type:"scatter3d"
+        type:"scatter3d",
+        name : "Cluster 3"
+    };
+    let layout ={
+        scene: {
+            xaxis:{title: 'PC 1'},
+            yaxis:{title: 'PC 2'},
+            zaxis:{title: 'PC 3'},
+            }
     };
     // Add values to the x, y and z according to class
     for (let id in patientsData["Class"]){
@@ -109,7 +120,7 @@ function clustersGraph(){
     let data =[trace0,trace1,trace2,trace3];
     console.log(data);
     // Tell Plotly to create graph at the div 3DPlot
-    Plotly.newPlot("3DPlot",data);
+    Plotly.newPlot("3DPlot",data,layout);
 
 };
 
