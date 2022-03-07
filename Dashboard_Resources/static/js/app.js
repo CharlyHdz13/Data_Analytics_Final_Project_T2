@@ -225,7 +225,30 @@ function lineChart(cluster){
         // Push traceCluster to data to graph
         data.push(traceCluster);
     };
-    Plotly.newPlot("LineChart",data);
+    let layout ={
+        xaxis: {
+            title: {
+              text: 'Time',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
+        },
+        yaxis: {
+            title: {
+              text: 'Deaths',
+              font: {
+                family: 'Courier New, monospace',
+                size: 18,
+                color: '#7f7f7f'
+              }
+            }
+        }
+
+    }
+    Plotly.newPlot("LineChart",data,layout);
 };
 // Function that builds bar chart
 function barChart(cluster){
