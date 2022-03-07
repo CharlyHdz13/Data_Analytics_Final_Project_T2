@@ -45,90 +45,14 @@ Scope of the project may be increase/expand according to the results we get. Ini
 - Software: Git version 2.33.0.windows.2, Visual Studio 1.62.2, Jupiter Notebook 6.4.6, Python 3.7.10 (default, Feb 26 2021, 13:06:18) [MSC v.1916 64 bit (AMD64)]Anaconda.
 - Details on : [Tecnologies_Used_T2.md](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/10a8587a557befa9d8261e704503c469586ad280/Technologies_Used_T2.md)
 
-# First Segment Project Deliverable
+## Structure of Github
+- DashBoard_Resources: This folder includes all the code and app for our Dashboard.
+- Image_Resources: This folder includes the images we use for the readme update.
+- PPT_ Resources: The folder includes our Powerpoint Presentation.
+- Python_Files_Resources: The folder includes of Python coding files we used for data exploration and others.
+- Queries_Roaources: THe foled includes the coding for our data table creation.
 
-## Machine Learning Model
-In order to understand the overall relationship between health and vaccination data, we are looking forward to develop an unsupervised machine learning model to identify different clusters of patients so that we can analyze the death probability and illness seriousness among the different groups. 
-
-The modeling process will consist of:
-- Initial data processing (cleaning, encoding, scaling);
-- Followed by a Principal Component Analysis to decrease features;
-- Elbow curve chart to define optimal clusters;
-- K-means model selected;
-- Class prediction and visualization.
-
-1. Data is taken provisionally from the DB:
-
-![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
-
-2. Outputs label(s) for input data is the following:
-- Data premises:
-    * Processed dataset: 5.3K data points and 81 features
-    * Six clusters selected (Elbow Curve)
-    * 3D Plotting to visualize each cluster
-
-- Elbow Curve:
-
-![Elbow_Curve_V1.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Elbow_Curve_V1.png)
-
-- Clustering as follows:
-
-![Cluster_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/67e7223c94128c24ab2e342a089638c614490161/Image_%20Resources/Cluster_V1.png)
-
-## Classification
-Preliminarily we'll use the Logistic Regression to predict the outcome of COVID patients. We hope to use this model over the clusters, but also with filtered rows in order to answer some of our questions as:  *Can we identify which vaccine has the highest mortality rate?*
-| ![Predict_vs_Actual_df](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Predict_vs_Actual_df.png) | ![Card_Report](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Card_Report.png) |
-|--|--|
-
-
-## Database
-First steps with Database were exploration and cleaning. 
-
-1. Each column was reviewed in order to understand content  and determine which columns would be useful and which ones could be removed.
-
-2. Using Pandas the goal was completed, obtaining the values counts for each column and also getting the count for the NaN values inside each column of the dataset. finally we determined the columns needed and included a brief description of each column and checked if it was useful or not.
-
-![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/1155fda6dfa4c5bbaa167e7c404d7600b1727d25/Image_%20Resources/DB_Columns_V1.png)
-
-3. As a result from exploration activity, we determined that some columns would be used only for the Machine Learning algorithm and some columns would be used for the Dashboard. This conclusion comes from the correlation on the columens, where some columns have direct correlation with the target we want to predict and we don’t want to skew our algorithm. The selected columns for each element can be found inside the **SelectedColumns sheet** in this work-document. 
-
-![DB_Columns_V1](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/1155fda6dfa4c5bbaa167e7c404d7600b1727d25/Image_%20Resources/DB_Columns_V1.png)
-
-4. Most of the unused columns of the original dataset were consired as this categorization per the fact that most this columns are compunded for NaN values above 2000 observations, No value added keeping this columns.
-
-5. Only one exception was made on **weight** column, which shows 2,556 NaN values, howevere we this feature is a *MUST* as a characteristic in patient's health status.
-
-The Provisional database that stands in for the final database accomplishes the following:
-
-- The following Entity relationship diagram (ERD) shows the initial integration of the database, this will help us create the **Final Data Base** we need to develop our machine learning model, and our dashboard which is based in mortality of patients with COVID 19.
-
-![DBERD](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DBERD.png)
-
-  1. The first table is “Identification”. This table includes de main data of the person treated.
-  2. “Comorbilities” which is our second table, this table comes Boolean values, depending on this values, the connection continue to Third  - sixth table as follows:
-  3. Third table “Autoimmune Disease”
-  4. Fourth table “Cancer”
-  5. Fifth table “Smoking”
-  6. Sixth table “Immunosuppresion” 
-  7. The next table “Vital signs” is correlated to the first one “Identification”
-  8. Eighth table “Evolution” also correlated with the first one
-  9. Finally “Death cause” table is correlated with “Evolution” Table.
-
-- Draft machine learning module is connected to the provisional database (image from Mockup model taking information from Database in CSV format.
-
-![DB_conn_Model](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/f63bf5ce4b3f0845d9a4de7401409b115fa49d6f/Image_%20Resources/DB_conn_Model.png)
-
-## Questions to be Answered
-* Using unsupervised machine learning, can we cluster to find differentiators to help us identify the severity of the infection?
-* Using a machine learning model, can we predict the outcome of a patient with certain characteristics?
-* Can we identify Covid-19 infected patients who will need more resources?
-* Is it possible to estimate the probability of death from patient data?
-* Can we identify which vaccine has the highest mortality rate?
-* Can we identify patients affected by coronavirus who will not overcome the disease?
-
-# Second Segment Project Deliverable :point_left:
-
-## Question to be Answered (2SDP) :point_left:
+# Question to be Answered
 All the questions on our first deliverable we joint in only one, so it can be use for our main purpose of the analysis/project. According to the current variables that a patient shows entering to a hospital infected with COVID - 19. Does the hospital should dedicate resources on a 1st, 2nd or 3rd level to the patient to help him/her getting better? Each one of the levels can help Hospitals being able to better manage resources for health emergency care.
 
 ## Database (2SDP) :point_left:
@@ -138,14 +62,11 @@ Database exploration was performed in a logic traceable steps in order to have a
 All steps can be veryfy in python file [Database_Exploration.ipynb](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Pytho_Files_Resources/Database_Exploration.ipynb)
 
 We decided to use AWS ERD service to be the host server of our database.
-![Database_Storage_AWS.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Image_%20Resources/Database_Storage_AWS.png)
 
 We are using PostgreSQL as our system v.12.8 because these version allows us a free version in AWS to be able to save our datasets inside. 
 We decided to make exploration with Jupyter Notebook, and decided to create our DB with the next  [Queries](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Queries_Resources/Queries.sql) then decided to used the following types of JOINS to make correlations in the DB for demostration purposes which will allow to make exploration for the models.
 
-![Joins.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/main/Image_%20Resources/Joins.png)
-
-## Machine Learning Models (2SDP) :point_left:
+## Machine Learning Models
 
 ### **Clustering Model**
 Clustering model allow us to categorize records into a certain number of clusters, in other words identifying groups of similar records and labeling the records according to the group to which they belong. This is done without the benefit of prior knowledge about the groups and their characteristics.
