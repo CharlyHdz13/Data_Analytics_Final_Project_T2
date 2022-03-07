@@ -55,7 +55,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
 # Question to be Answered
 All the questions on our first deliverable we joint in only one, so it can be use for our main purpose of the analysis/project. According to the current variables that a patient shows entering to a hospital infected with COVID - 19. Does the hospital should dedicate resources on a 1st, 2nd or 3rd level to the patient to help him/her getting better? Each one of the levels can help Hospitals being able to better manage resources for health emergency care.
 
-## Database (2SDP) :point_left:
+## Database
 Database exploration was performed in a logic traceable steps in order to have avaiable the uinformation usefull for our analysis. We indentify thos data which has less tham 90% of availability, them we delete columns not usefull and fill those missing information. Columns names was updated and binary columns were maintain to perform the analysis. The steps performed are shown as folows:
 ![Database_Exploration.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/26354b848fb3e4c6fe0fff6d8a7d56148842fe9d/Image_%20Resources/Database_Exploration.png)
 
@@ -105,7 +105,7 @@ We also decided over a _hierarchical clustering_ since the kMeans model allows t
 **ClusterModel_VF:**
 ![ClusterModel_V2.png](https://github.com/CharlyHdz13/Data_Analytics_Final_Project_T2/blob/46a4e610d2db4ea30b8efe0eddfd2b1de3d7f266/Image_%20Resources/ClusterModel_V2.png)
 
-### Logistic Regression ML Model  :point_left:
+### Logistic Regression ML Model
 
 As in the Clustering Model, the data was taken form the AWS DataBase. Table has 87 columns, or many features! From which we have some string and datetime columns, we'll need to modify those ones and reduce the size of the dataframe so it can score a better accuracy from last week.
 
