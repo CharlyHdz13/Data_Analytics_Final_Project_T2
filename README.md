@@ -18,7 +18,7 @@ COVID - 19 is affecting globally, not only for healthy reasons, economic, social
     2. In the Public Section - Mexico City has achieved universal health coverage and its public healthcare is acceptable for most Mexican residents.
 
 ## Overview of the project
-Mexican health professionals complain the government moved too slowly to shut down business and stop the spread of the coronavirus. Doctors say hospitals around Mexico City reached capacity rapidly. Additionally, it is a "public belief" that is you need to be treated in a public institution; the expected result is worse than if you are treated on a private Hospital. Trying to eliminate this "Public belief" and using data to try to expect the outcome from those patients which arrive to a public hospital to be treated with Covi-19 disease we will perform exploration, data analysis and hypothesis verification taking in consideration each patient data particularity.
+Mexican health professionals complain the government moved too slowly to shut down business and stop the spread of the coronavirus. Doctors say hospitals around Mexico City reached capacity rapidly. Additionally, it is a "public belief" that is you need to be treated in a public institution; the expected result is worse than if you are treated on a private Hospital. Trying to eliminate this "Public belief" and using data to try to expect the outcome from those patients which arrive to a public hospital to be treated with Covi-19 disease we will perform data exploration and analysis to asses each patient's conditions, comorbilities and outcome.
 
 Scope of the project may be increase/expand according to the results we get. Initially:
 - We will try to find out any pattern or trends that assume an insight into how the Covid pandemic played out. 
@@ -53,7 +53,7 @@ Scope of the project may be increase/expand according to the results we get. Ini
 - Queries_Roaources: THe foled includes the coding for our data table creation.
 
 # Question to be Answered
-All the questions on our first deliverable we joint in only one, so it can be use for our main purpose of the analysis/project. According to the current variables that a patient shows entering to a hospital infected with COVID - 19. Does the hospital should dedicate resources on a 1st, 2nd or 3rd level to the patient to help him/her getting better? Each one of the levels can help Hospitals being able to better manage resources for health emergency care.
+According to the current variables that a patient shows entering to a hospital infected with COVID - 19. Does the hospital should dedicate resources on a 1st, 2nd or 3rd level to the patient to help him/her getting better? Each one of the levels can help Hospitals being able to better manage resources for health emergency care.
 
 ## Database
 Database exploration was performed in a logic traceable steps in order to have avaiable the uinformation usefull for our analysis. We indentify thos data which has less tham 90% of availability, them we delete columns not usefull and fill those missing information. Columns names was updated and binary columns were maintain to perform the analysis. The steps performed are shown as folows:
