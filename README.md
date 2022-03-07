@@ -138,7 +138,38 @@ It was a necessary process since some values in the columns only were represente
 - The results of the accuracy given different variances in the data preprocessing are interesting. We'll study them further in the next delivery.
 
 ## Dashboard
-For this second deliverable we sketched out how our dashboard will work and look like. With the following [DashBoard](https://docs.google.com/presentation/d/184yOuFpKU-F9wypu_j39GzX5Uihh3aV30aT-S8nwJlo/edit#slide=id.g1177521f176_0_0) were a blueprint of how we want our dashboard to work and look.
+For the [DashBoard](https://docs.google.com/presentation/d/184yOuFpKU-F9wypu_j39GzX5Uihh3aV30aT-S8nwJlo/edit#slide=id.g1177521f176_0_0) were we based on our previous blueprint.
+We used Flask to build a webapp to hold the 3 graphs and the maps. The following image is what the user sees when accessing the app.
+
+![image](https://user-images.githubusercontent.com/89402038/156961283-1444aefc-02c3-4487-bcb9-47f2e7400f65.png)
+
+At the top we have the NavBar, which allows the user to move freely between the main page and the page were we give a quick overview of the project.
+
+![image](https://user-images.githubusercontent.com/89402038/156961423-84b5138d-ed7c-4e4c-951d-5d6a86f5ec92.png)
+
+On the home page, the first graphs are built with all the data collected from our database. 
+
+![image](https://user-images.githubusercontent.com/89402038/156961540-46a415b3-521f-4fc0-be73-456f2fa7e2a1.png)
+
+The first graph is the clusters that we got from running an unsupervised machine learning algorithm on the data. The second graph are the total deaths through time, the third graph is the sum of comorbilities the patients had, and finally a map showing with circles the amount of deaths each institute had. The circles when clicked display a popup like the one of the following image.
+
+![image](https://user-images.githubusercontent.com/89402038/156961747-70c0fa18-dd68-4ed3-9d57-b4b76c6ffd84.png)
+
+At the top we have a selection bar, where you can choose which cluster the second and third graphs to be filtered with.
+
+![image](https://user-images.githubusercontent.com/89402038/156961881-a02a7685-a286-4c33-9868-c0ac826192ee.png)
+
+Once the graphs are filtered, we discovered the following:
+
+![image](https://user-images.githubusercontent.com/89402038/156961960-82541ee8-b17f-4443-bea8-0be03d67c2a4.png)
+
+That the algorithm clustered the patients according to deaths and comorbilities. The cluster 1 are predominantly patients with obesity, diabetes, and hypertension that are the ones with the most deaths.
+
+Once one cluster is selected, the button random patient appears. When clicked a random patient from the selected cluster is taken and we arrive at the following page.
+
+![image](https://user-images.githubusercontent.com/89402038/156962197-f2f97e38-2c48-43c9-826a-83c6b774f66a.png)
+
+Where we are shown the basic information of the patient and the option to adjust the parameters to feed them into a previously trained supervised machine learning model to predict the outcome of the patient. This feature is at the moment not implemented.
 
 The overall objective of our dashboard is to find new trends, that our clustering model could show. Also be able to determine with a supervised Machine Learning algorithm if a patient needs more or less resources into his treatment according to his overall conditions of the patient.
 
