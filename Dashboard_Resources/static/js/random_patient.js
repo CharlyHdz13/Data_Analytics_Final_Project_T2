@@ -27,10 +27,10 @@ init();
 function getData(){
     let data = {};
     data["sex"]=d3.select("#sex").property("value");
-    data["height"]=d3.select("#height").property("value");
-    data["weight"]=d3.select("#weight").property("value");
+    data["height_cm"]=d3.select("#height").property("value");
+    data["weight_kg"]=d3.select("#weight").property("value");
     data["age"]=d3.select("#age").property("value");
-    data["o2_saturation"]=d3.select("#o2_saturation").property("value");
+    data["oximeter_saturation"]=d3.select("#o2_saturation").property("value");
     data["heart_rate"]=d3.select("#heart_rate").property("value");
     data["obesity"]=d3.select("#obesity").property("checked");
     data["diabetes"]=d3.select("#diabetes").property("checked");
@@ -40,7 +40,23 @@ function getData(){
     data["asthma"]=d3.select("#asthma").property("checked");
     data["cancer"]=d3.select("#cancer").property("checked");
     data["immunosuppression"]=d3.select("#immunosuppression").property("checked");
-    
+    columns=[
+    "admission_date",
+    "symptons_onset",
+    "temperature_c",
+    "respiratory_rate",
+    "systolic_blood_pressure",
+    "diastolic_blood_pressure",
+    "glasgow_coma_scale",
+    "maximum_respiratory_support_during_any_time_of_the_hospitalizat",
+    "imv_respiratory_support",
+    "date_of_intubation",
+    "date_of_extubation",
+    "stay_lenght",];
+    columns.forEach(column => {
+        data[column]=randomPatientData[column];
+    });
+    console.log(data);
     $.ajax({
         url:"/test",
         type:"POST",
