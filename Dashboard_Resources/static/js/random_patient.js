@@ -40,6 +40,7 @@ function getData(){
     data["asthma"]=d3.select("#asthma").property("checked");
     data["cancer"]=d3.select("#cancer").property("checked");
     data["immunosuppression"]=d3.select("#immunosuppression").property("checked");
+    
     $.ajax({
         url:"/test",
         type:"POST",
