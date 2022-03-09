@@ -25,11 +25,24 @@ function init(){
 init();
 
 function getData(){
-    console.log("Working");
-    let prueba ={key:"value"};
+    let data = {};
+    data["sex"]=d3.select("#sex").property("value");
+    data["height"]=d3.select("#height").property("value");
+    data["weight"]=d3.select("#weight").property("value");
+    data["age"]=d3.select("#age").property("value");
+    data["o2_saturation"]=d3.select("#o2_saturation").property("value");
+    data["heart_rate"]=d3.select("#heart_rate").property("value");
+    data["obesity"]=d3.select("#obesity").property("checked");
+    data["diabetes"]=d3.select("#diabetes").property("checked");
+    data["hypertension"]=d3.select("#hypertension").property("checked");
+    data["smoking"]=d3.select("#smoking").property("checked");
+    data["alcoholism"]=d3.select("#alcoholism").property("checked");
+    data["asthma"]=d3.select("#asthma").property("checked");
+    data["cancer"]=d3.select("#cancer").property("checked");
+    data["immunosuppression"]=d3.select("#immunosuppression").property("checked");
     $.ajax({
         url:"/test",
         type:"POST",
         contentType: "application/json",
-        data: JSON.stringify(prueba)});
+        data: JSON.stringify(data)});
 };
