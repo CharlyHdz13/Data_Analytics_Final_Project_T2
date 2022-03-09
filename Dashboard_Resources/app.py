@@ -1,5 +1,5 @@
 # Import Flask to build web app
-from flask import Flask, render_template, redirect, url_for,jsonify
+from flask import Flask, render_template, redirect, url_for,jsonify, request
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -45,9 +45,17 @@ def random_patient():
 
 # Define route for predict page of our dashboard which will run a python script which will predict the outcome.
 # At the end it returns to the /random-patient
-@app.route("/predict")
+@app.route("/test", methods=["POST"])
 def predict():
-   return redirect("/random-patient",code=302)
+   output = request.get_json()
+   print(output) # This is the output that was stored in the JSON within the browser
+   print(type(output))
+   # result = json.loads(output) #this converts the json output to a python dictionary
+   # print(result) # Printing the new dictionary
+   # print(type(result))#this shows the json converted as a python dictionary
+   # return result
+   return output
+   # return redirect("/random-patient",code=302)
 
 @app.route("/patients.json")
 def patients():

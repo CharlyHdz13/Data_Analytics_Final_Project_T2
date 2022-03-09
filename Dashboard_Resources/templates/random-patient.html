@@ -52,7 +52,7 @@
           patient.
         </h4>
         <!-- Button that will redirect to the /predict site which will run the ML prediction with the values specified by the user -->
-        <h3 style="text-align: center;"><a class="btn btn-dark btn-lg" href="/predict" role="button" id="predict">Predict</a></h3>
+        <h3 style="text-align: center;"><a class="btn btn-dark btn-lg" href="/test" role="button" id="predict" onclick="getData();">Predict</a></h3>
       </div>
       <div class="container">
         <div class="row">
@@ -161,6 +161,7 @@
       <br>
       <!-- Site from where the icon is taken -->
       <p style="text-align: center;"><a href="https://www.flaticon.com/free-icons/health" title="health icons">Health icons created by Freepik - Flaticon</a></p>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
       <!-- Run random_patient.js -->
       <script src="static\js\random_patient.js"></script>
       <!-- Call Popper libraries, just in case we use something that requires it -->

@@ -23,3 +23,13 @@ function init(){
 
 // Initialize
 init();
+
+function getData(){
+    console.log("Working");
+    let prueba ={key:"value"};
+    $.ajax({
+        url:"/test",
+        type:"POST",
+        contentType: "application/json",
+        data: JSON.stringify(prueba)});
+};
