@@ -56,6 +56,12 @@ function getData(){
     columns.forEach(column => {
         data[column]=randomPatientData[column];
     });
+    let result = Math.floor(Math.random() *100)+1;
+    if((data.obesity===true || data.diabetes===true || data.hypertension ===true || data.oximeter_saturation<90)&&(result<80)){
+        alert("The person needs third or second level attention");
+    }else{
+        alert("The person needs only needs first level attention");
+    }
     console.log(data);
     $.ajax({
         url:"/test",
