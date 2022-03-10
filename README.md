@@ -70,6 +70,7 @@ According to the current variables that a patient shows entering to a hospital i
 
 
 ## 🗄️ Database
+The Database was obtained directly from the patients who entered to the public hospitals in Mexico City, as a result of a direct survey made to those patients with COVID diagnosis.
 
 ### 🧹 Cleaning Process
 - The database started with an analysis of the columns that had less than 90% of the data. If that was the case, we selected the columns that could be filled with *NO* or *0s*, the columns that couldn't be filled, and the remaining went to further exploration analysis.
