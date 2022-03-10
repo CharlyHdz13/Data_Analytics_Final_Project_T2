@@ -51,7 +51,7 @@ function clustersGraph(){
         z:[],
         mode:"markers",
         marker:{
-            color:"#000000"
+            color:"#CB0B0B"
         },
         type:"scatter3d",
         name : "Cluster 0"
@@ -84,7 +84,7 @@ function clustersGraph(){
         z:[],
         mode:"markers",
         marker:{
-            color:"#02CCFD"
+            color:"#0B2BCB"
         },
         type:"scatter3d",
         name : "Cluster 3"
@@ -94,7 +94,9 @@ function clustersGraph(){
             xaxis:{title: 'PC 1'},
             yaxis:{title: 'PC 2'},
             zaxis:{title: 'PC 3'},
-            }
+            },
+        paper_bgcolor:'#87cefa',
+        plot_bgcolor:'#87cefa'
     };
     // Add values to the x, y and z according to class
     for (let id in patientsData["Class"]){
@@ -202,7 +204,7 @@ function lineChart(cluster){
             size:10
         },
         line:{
-            color:"#00AEFF"
+            color:"#0B2BCB"
         }
     };
     // Fill trace.y with the corresponding count of deaths for each date
@@ -232,7 +234,7 @@ function lineChart(cluster){
               font: {
                 family: 'Courier New, monospace',
                 size: 18,
-                color: '#7f7f7f'
+                color: '#000000'
               }
             }
         },
@@ -242,10 +244,12 @@ function lineChart(cluster){
               font: {
                 family: 'Courier New, monospace',
                 size: 18,
-                color: '#7f7f7f'
+                color: '#000000'
               }
             }
-        }
+        },
+        paper_bgcolor:'#87cefa',
+        plot_bgcolor:'#87cefa'
     }
     Plotly.newPlot("LineChart",data,layout);
 };
@@ -302,7 +306,7 @@ function barChart(cluster){
               font: {
                 family: 'Courier New, monospace',
                 size: 18,
-                color: '#7f7f7f'
+                color: '#000000'
               }
             }
         },
@@ -312,10 +316,12 @@ function barChart(cluster){
               font: {
                 family: 'Courier New, monospace',
                 size: 18,
-                color: '#7f7f7f'
+                color: '#000000'
               }
             }
-        }
+        },
+        paper_bgcolor:'#87cefa',
+        plot_bgcolor:'#87cefa'
     };
     console.log(trace);
     let data =[trace];

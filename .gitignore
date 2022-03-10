@@ -1,5 +1,6 @@
 # Files to ignore
 Resources/
+patients.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
